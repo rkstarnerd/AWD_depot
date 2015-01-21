@@ -92,8 +92,8 @@
 }
 
 #store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
+ margin-top: 0.5em;
+ margin-bottom: 0.8em;
 }
 
 #store .entry .price_line {
@@ -109,4 +109,24 @@
   color: #44a;
   font-weight: bold;
   margin-right: 2em;
+}
+
+/* Styles for main page */
+
+#banner {
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
+  text-align: center;
+}
+
+# banner img {
+  float: left;
+}
+
+# columns {
+  background: #141;
 }
