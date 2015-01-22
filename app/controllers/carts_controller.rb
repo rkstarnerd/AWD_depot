@@ -64,7 +64,17 @@ class CartsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
+      begin
       @cart = Cart.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error "Attempt to access invalid cart #{params[:id]}"
+      redirect_to store_url, :notice => 'Invalid cart'
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render :json => @cart }
+      end
+    end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
