@@ -19,11 +19,11 @@
     </div>
     <div class="field">
       <%= f.label :password, 'Password' %><br>
-      <%= f.text_field :hashed_password %>
+      <%= f.password_field :password, :size => 40 %>
     </div>
     <div class="field">
-      <%= f.label :salt %><br>
-      <%= f.text_field :salt %>
+      <%= f.label :password_confirmation, 'Confirm Password' %><br>
+      <%= f.password_field :password_confirmation, :size => 40 %>
     </div>
     <div class="actions">
       <%= f.submit %>
